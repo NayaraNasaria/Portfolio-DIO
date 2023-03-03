@@ -1,18 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-*{
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-body{
-    background-color: black;
-    color: white;
+body {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(73, 73, 73, 1) 100%
+  );
+  color: rgb(17, 17, 17);
 }
 
-.main{
-    margin: .5rem;
-    padding: 1rem;
-    border: 1px solid #fff;
-    border-radius: .5rem;
+.main {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #0d0d0d;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (min-width: 760px) {
+  .main {
+    max-width: 1024px;
+    margin: 1rem auto;
+  }
 }

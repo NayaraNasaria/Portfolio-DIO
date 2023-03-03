@@ -1,0 +1,62 @@
+.acordeon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #0d0d0d;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+.acordeon.open,
+.acordeon:hover {
+  background-color: rgb(178, 9, 43);
+  border-color: rgb(98, 5, 13);
+  color: white;
+}
+
+.acordeon .trigger {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #0d0d0d;
+  border: none;
+}
+
+.acordeon .trigger:hover {
+  cursor: pointer;
+}
+
+.acordeon .trigger::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/img/icon/expand_more_FILL0_wght400_GRAD0_opsz48.svg");
+  transition: 0.25s;
+}
+
+.acordeon.open .trigger::after {
+  transform: rotate(180deg);
+}
+
+.acordeon .content {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.acordeon.open .content {
+  display: block;
+  height: 100%;
+  opacity: 1;
+  padding: 0 1rem 1rem 2rem;
+}

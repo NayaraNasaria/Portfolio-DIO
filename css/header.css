@@ -1,55 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-header .photo{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+header .photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-header .title{
-    text-align: center;
-    
+header .title {
+  text-align: center;
 }
 
-.informations{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+.informations {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.informations p{
-    display: flex;
-    margin: .5rem;
-    flex-direction: row;
-    font-size: 1.125rem;
+.informations p {
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: row;
+  font-size: 1.125rem;
 }
 
-.informations p::before{
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: .5rem;
+.informations p::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0.5rem;
 }
 
-.informations .email::before{
-    background-image: url('img/icon/email.png');
+.informations .email::before {
+  background-image: url("/img/icon/email.png");
 }
 
-.informations .estado::before{
-    background-image: url('img/icon/estado.png');
+.informations .estado::before {
+  background-image: url("/img/icon/estado.png");
 }
 
-.informations .telefone::before{
-    background-image: url('img/icon/.telefone.png');
+.informations .telefone::before {
+  background-image: url("/img/icon/telefone.png");
 }
 
+@media only screen and (min-width: 760px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "photo title"
+      "photo informations";
+  }
+
+  header .photo {
+    grid-area: photo;
+    margin: 0 auto;
+  }
+  header .title {
+    grid-area: title;
+    text-align: start;
+    max-width: 210px;
+  }
+  header .informations {
+    grid-area: informations;
+  }
+}
